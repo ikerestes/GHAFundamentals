@@ -1,0 +1,17 @@
+name: Sample Workflow
+on:
+  push:
+  workflow_dispatch:
+  
+  permissions:
+    contents: read
+
+
+  jobs:
+    build:
+
+      permissions:
+        contents: read
+      run-on: ubuntu-latest
+      steps:
+        - actions/checkout@v5
