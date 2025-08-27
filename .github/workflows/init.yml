@@ -5,12 +5,6 @@ on: [create, workflow_dispatch]
 permissions: 
   issues: write
   contents: read
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        type: environment
-        required: true
 jobs:
   initialize_repo:
     runs-on: ubuntu-latest
