@@ -42,13 +42,13 @@ runs:
 </details>
 
 3. Commit the file (`[skip ci]` to not run a build, yet).
-4. Inside the `hello-world-docker-action` folder create the [`Dockerfile`](/../../new/main?filename=hello-world-docker-action%2FDockerfile). The container inherits `FROM alpine:3.22` and should copy and execute a file `entrypoint.sh`. Remember to make the script executable with `RUN chmod +x entrypoint.sh`
+4. Inside the `hello-world-docker-action` folder create the [`Dockerfile`](/../../new/main?filename=hello-world-docker-action%2FDockerfile). The container inherits `FROM alpine:3.23` and should copy and execute a file `entrypoint.sh`. Remember to make the script executable with `RUN chmod +x entrypoint.sh`
 
 <details>
   <summary>Solution</summary>
 
 ```dockerfile
-FROM alpine:3.22
+FROM alpine:3.23
 
 # Set the working directory inside the container
 WORKDIR /usr/src
@@ -103,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4
 
       - name: Run my own container action
         id: hello-action
